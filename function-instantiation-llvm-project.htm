@@ -1,0 +1,2302 @@
+
+<!-- saved from url=(0070)file:///Users/Barua/Downloads/function-instantiation-llvm-project.html -->
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40" xmlns:ns0="http://macVmlSchemaUri"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 15">
+<meta name="Originator" content="Microsoft Word 15">
+<link rel="File-List" href="file:///Users/Barua/Downloads/function-instantiation-llvm-project_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Barua</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Avik Barua</o:LastAuthor>
+  <o:Revision>82</o:Revision>
+  <o:TotalTime>479</o:TotalTime>
+  <o:Created>2016-04-22T04:46:00Z</o:Created>
+  <o:LastSaved>2016-05-08T06:31:00Z</o:LastSaved>
+  <o:Pages>10</o:Pages>
+  <o:Words>3344</o:Words>
+  <o:Characters>19066</o:Characters>
+  <o:Lines>158</o:Lines>
+  <o:Paragraphs>44</o:Paragraphs>
+  <o:CharactersWithSpaces>22366</o:CharactersWithSpaces>
+  <o:Version>15.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]-->
+<link rel="themeData" href="file:///Users/Barua/Downloads/function-instantiation-llvm-project_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="file:///Users/Barua/Downloads/function-instantiation-llvm-project_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="371">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="59" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536858881 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:3 0 0 0 1 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:32771 0 0 0 1 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536858881 -1073711037 9 0 511 0;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1073743103 0 0 415 0;}
+@font-face
+	{font-family:"Lucida Grande";
+	mso-font-alt:"Times New Roman";
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 1342218751 0 0 447 0;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-2147482993 6144 0 0 31 0;}
+@font-face
+	{font-family:"Lucida Handwriting";
+	panose-1:3 1 1 1 1 1 1 1 1 1;
+	mso-font-charset:0;
+	mso-generic-font-family:script;
+	mso-font-pitch:variable;
+	mso-font-signature:3 0 0 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;
+	font-weight:bold;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+pre
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:Courier;}
+tt
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-noshow:yes;
+	mso-style-priority:1;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-noshow:yes;
+	mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:major-bidi;
+	color:#2E74B5;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:major-bidi;
+	color:#5B9BD5;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:9.0pt;
+	mso-bidi-font-size:9.0pt;
+	font-family:"Lucida Grande";
+	mso-ascii-font-family:"Lucida Grande";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Lucida Grande";
+	mso-bidi-font-family:"Lucida Grande";}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+p.msolistparagraphcxspfirst, li.msolistparagraphcxspfirst, div.msolistparagraphcxspfirst
+	{mso-style-name:msolistparagraphcxspfirst;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+p.msolistparagraphcxspmiddle, li.msolistparagraphcxspmiddle, div.msolistparagraphcxspmiddle
+	{mso-style-name:msolistparagraphcxspmiddle;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+p.msolistparagraphcxsplast, li.msolistparagraphcxsplast, div.msolistparagraphcxsplast
+	{mso-style-name:msolistparagraphcxsplast;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:Mangal;
+	mso-bidi-theme-font:minor-bidi;}
+span.heading1char0
+	{mso-style-name:heading1char;
+	mso-style-unhide:no;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
+	color:#365F91;
+	font-weight:bold;}
+span.heading3char0
+	{mso-style-name:heading3char;
+	mso-style-unhide:no;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
+	color:#4F81BD;
+	font-weight:bold;}
+span.heading1char00
+	{mso-style-name:heading1char0;
+	mso-style-unhide:no;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
+	color:#365F91;
+	font-weight:bold;}
+span.heading3char00
+	{mso-style-name:heading3char0;
+	mso-style-unhide:no;
+	font-family:"Cambria",serif;
+	mso-ascii-font-family:Cambria;
+	mso-hansi-font-family:Cambria;
+	color:#4F81BD;
+	font-weight:bold;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;
+	mso-style-unhide:no;}
+span.im
+	{mso-style-name:im;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:272709236;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1240906516 124519226 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:39.0pt;
+	text-indent:-21.0pt;
+	font-family:Symbol;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:844973743;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-956923166 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+</style>
+<![endif]-->
+<meta name="Title" content="">
+<meta name="Keywords" content="">
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang="EN-US" link="blue" vlink="purple" style="tab-interval:.5in">
+
+<div class="WordSection1">
+
+<h1 align="center" style="text-align:center"><span style="font-size:16.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">DOCUMENTATION FOR THE LLVM PROJECT</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></h1>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">INTRODUCTION
+AND PROBLEM STATEMENT </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">LLVM is the name of a compiler that began as a
+research project in UIUC and is now maintained at Apple. Its main website is
+located <a href="http://www.llvm.org/" target="_blank">here</a>.&nbsp; LLVM is
+open-source software, and has been installed in Glue (Linux) for use in this
+class project. </p>
+
+<p style="text-align:justify">The goal of this project is to implement <i style="mso-bidi-font-style:normal">function argument instantiation</i> wherever
+one or more of the actual arguments of a function are constants at their call
+sites.&nbsp;&nbsp; For example, consider the following simple C code:</p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">main
+() {</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+a = 5, b = 10;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+diff1, diff2, diff3;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff1 = <span class="GramE">sub(</span>a, b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff2 = <span class="GramE">sub(</span>100, b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff3 = <span class="GramE">sub(</span>24, 25);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;
+font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">printf</span></span></span><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">(</span></span><span style="font-size:
+11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">“diff1
+= %d, diff2 = %d, diff3 = %d\n”, diff1, diff2 diff3);</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub(<span class="SpellE">int</span> x, <span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p style="text-align:justify">The above C code needs to be transformed into:</p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">main
+() {</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+a = 5, b = 10;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+diff1, diff2, diff3;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff1 = <span class="GramE">sub(</span>a, b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff2 = sub1(b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff3 = <span class="GramE">sub2(</span> );<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">printf</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+(“diff1 = %d, diff2 = %d, diff3 = %d\n”, diff1, diff2, diff3);</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub(<span class="SpellE">int</span> x, <span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub1(<span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span> x = 100;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub2( ) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span> x = 24, y =
+25;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing" style="text-align:justify">Whenever one or more arguments
+to a function are constants at a call site, instantiate the function definition
+by defining a new function with the constant arguments removed from the
+argument list and defined inside the function as local variables. Then, replace
+the original function at the call site with the new instantiated function.
+Note, the instantiated function will have the same functionality as the
+original function, but with the constant arguments being converted into local
+variables. In the example above, the statement <span style="font-size:11.0pt;
+font-family:&quot;Lucida Console&quot;">diff2 = <span class="GramE">sub(</span>100, b</span>)
+is converted into the statement <span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;">diff2
+= sub1(b)</span> and a new instantiated function <span style="font-size:11.0pt;
+font-family:&quot;Lucida Console&quot;">sub1(<span class="SpellE">int</span> y)</span> is
+defined.<span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">Ideally, to prevent code bloat, it would make
+sense to reuse the instantiated function definitions whenever possible.
+However, in this project, for the sake of simplicity, create a new instantiated
+function definition each time a function call with constant arguments is
+encountered. For example, the code </p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">main
+() {</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+a = 5, b = 10;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+diff1, diff2, diff3;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff1 = <span class="GramE">sub(</span>100, a);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff2 = <span class="GramE">sub(</span>100, b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff3 = <span class="GramE">sub(</span>24, 25);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">printf</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+(“diff1 = %d, diff2 = %d, diff3 = %d\n”, diff1, diff2 diff3);</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub (<span class="SpellE">int</span> x, <span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p style="text-align:justify">can be transformed into the code below even
+though sub1 and sub2 function definitions are duplicates. This is done purely
+for the sake of simplicity. </p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">main
+() {</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+a = 5, b = 10;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+diff1, diff2, diff3;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff1 = sub1(a);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff2 = sub2(b);<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">diff3 = <span class="GramE">sub3(</span> );<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify;text-indent:
+.5in"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">printf</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+(“diff1 = %d, diff2 = %d, diff3 = %d\n”, diff1, diff2, diff3);</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub(<span class="SpellE">int</span> x, <span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub1(<span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>x = 100;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub2(<span class="SpellE">int</span> y) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>x = 100;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span class="SpellE"><span class="GramE"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">int</span></span></span><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
+sub3( ) {<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">int</span> x = 24, y =
+25;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp; </span>return x - y;<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">}<o:p></o:p></span></p>
+
+<p class="MsoNoSpacing" style="margin-left:.5in;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNoSpacing" style="text-align:justify">All transformations in LLVM
+are performed on the intermediate representation (IR) of the code. The C code
+will be translated by LLVM automatically to internally use single static
+assignment (SSA) form, which will be discussed later in class.&nbsp; For now,
+suffice it to say that SSA translates code such that every variable is defined
+(assigned) only once; thus the name.<span style="font-size:11.0pt;font-family:
+&quot;Lucida Console&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">Your goal is to write a <i style="mso-bidi-font-style:
+normal">function argument instantiation</i> pass in LLVM that automatically
+performs the above transformation on any program provided to LLVM. Your pass
+itself will work on LLVM IR provided as input, and produce modified LLVM IR as
+output, allowing easy integration into the existing LLVM compiler. To do so,
+you must become familiar with LLVM.&nbsp; Please follow the steps in the rest
+of this document to achieve this.</p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">COLLABORATION
+POLICY</span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">This project should be done by students in groups
+of two each.&nbsp; That arrangement is ideal since one member of a team might
+get stuck by themselves, and collaboration can help solve this problem, and
+encourages learning.&nbsp; When doing the project in groups, both students are
+expected to be knowledgeable with all aspects of the project. </p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">THINGS
+TO SUBMIT</span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">The project should be uploaded electronically on
+the class website (the elms/canvas site). The deadline for submission is <u>11:59pm
+on Tuesday, May 10, 2016</u>. Later, the TA will email the class mailing list
+with the exact instructions on how and what to submit. However the submission
+will include at least the following:</p>
+
+<p style="margin-left:.75in;text-align:justify;text-indent:-.5in"><span style="mso-spacerun:yes">&nbsp;</span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(<span class="SpellE">i</span>)</span><span style="font-size:7.0pt;mso-fareast-font-family:
+&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The source code for your pass.</p>
+
+<p style="margin-left:.75in;text-align:justify;text-indent:-.5in"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(ii)</span><span style="font-size:7.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The output IR after running your pass on each of the examples in the <span class="SpellE">llvm</span>/<span class="SpellE">test_codes</span> directory. </p>
+
+<p style="margin-left:.75in;text-align:justify;text-indent:-.5in"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">(iii)</span><span style="font-size:7.0pt;mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Any modified <span class="SpellE">Makefile</span> you use to compile your
+pass.&nbsp; </p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">MACHINE
+TO USE LLVM</span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">Although most computers on the university glue
+system use the Solaris OS, a few use the Linux OS.&nbsp; Since LLVM is
+compatible with Linux but not Solaris, <i><u>you must use a Linux glue machine
+for this project, as otherwise the software will not work</u></i>.&nbsp; The
+following glue Linux machine has been provided to you for this project:</p>
+
+<p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+compute.ece.umd.edu</p>
+
+<p style="background:white">Please log into the above machine using <span class="SpellE">ssh</span> or some other secure remote login method.&nbsp; (<b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">Alert:</i></b><i style="mso-bidi-font-style:normal"> You currently will not be able to login,
+since you are not on the allowed list for this machine. I am working with the
+ECE help desk to give you access. This should happen by Friday, April 22. I
+will email you when that happens.</i>) You can use your existing UMD glue
+account name and directory ID to login.&nbsp; If you do not have a glue
+account, please obtain one immediately. <span style="mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:black">If you are having problems accessing your glue
+account, or you don’t have a glue account, the UMD IT help desk recommended
+that all students call them to get help.&nbsp;&nbsp;Please call them at:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;background:white"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black">Phone Support: 301.405.1500<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+margin-left:.5in;background:white"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black">Hours: Mon - Fri 8:00 a.m.
+- 6:00 p.m.<o:p></o:p></span></p>
+
+<p style="text-align:justify"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">BASICS
+TO USE LLVM </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">A brief tutorial to use <span class="SpellE">llvm</span>
+is described <a href="http://llvm.org/releases/3.4/docs/GettingStarted.html" target="_blank">here</a>. LLVM is already installed on the system, so don’t try
+reinstalling it. Some of the important steps and additional steps are listed
+below. </p>
+
+<p style="text-align:justify">First remember to add the <span class="SpellE">llvm</span>
+and <span class="SpellE">llvm-gcc</span> install directories to your environment
+variable PATH using </p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify"><span class="SpellE"><span class="GramE">setenv</span></span> PATH
+/afs/glue/class/old/enee/759c/llvm/llvm-3.4-install/opt/bin/:$PATH</p>
+
+</div>
+
+<p style="text-align:justify">Next, copy over the example files in /<span class="SpellE">afs</span>/glue/class/old/<span class="SpellE">enee</span>/759c/<span class="SpellE">llvm</span>/<span class="SpellE">test_codes</span>/ to a local
+directory in your home directory. Then the output bytecode file (e.g.,
+example1.bc) can be obtained from source code written in C (e.g., example1.c)
+using: </p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify">clang -c -emit-<span class="SpellE">llvm</span> example1.c -o example1.bc</p>
+
+</div>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">Bytecode is the Intermediate Representation of the LLVM
+compiler. Please test your programs on the test codes placed in the <span class="SpellE">test_codes</span> folder. <o:p></o:p></span></p>
+
+<p style="text-align:justify">This bytecode can be converted to assembly code
+(e.g., example1.s) using: </p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify"><span class="SpellE">llc</span> &lt; input bytecode &gt; -o &lt; output assembly file
+&gt;</p>
+
+</div>
+
+<p style="text-align:justify">This &lt; output assembly file &gt; can be assembled
+to an executable (e.g., example1) using <span class="SpellE">gcc</span>: </p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify"><span class="SpellE"><span class="GramE">gcc</span></span><span class="GramE"> &nbsp;&lt;</span>
+assembly file &gt; -o &lt; output executable &gt;</p>
+
+</div>
+
+<p style="text-align:justify">We can use <span class="SpellE">llvm</span>-dis to
+disassemble bytecode to a human readable IR file (e.g., example1.ll)</p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify"><span class="SpellE">llvm</span>-dis &lt; input bytecode &gt; -o &lt; output human
+readable IR file &gt;</p>
+
+</div>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+This output file is human readable. The instructions in it will be explained in
+the next section. <o:p></o:p></span></p>
+
+<p style="text-align:justify">This human readable IR can be assembled to
+bytecode using <span class="SpellE">llvm</span>-as as follows </p>
+
+<div style="border:solid black 1.5pt;padding:0in 0in 0in 0in;position:static;
+z-index:auto">
+
+<p style="margin:0in;margin-bottom:.0001pt;text-align:justify"><span class="SpellE">llvm</span>-as &lt; input human readable IR file &gt; -o &lt;
+output bytecode &gt;</p>
+
+</div>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">INTRODUCTION
+TO LLVM_IR </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">The human readable IR that was obtained in the last section
+can be opened using any editor of your choice. <o:p></o:p></span></p>
+
+<p style="text-align:justify">The first thing that will be helpful in
+understanding the human readable LLVM would be to understand few of the
+instructions present in the intermediate representation of LLVM. The language
+reference manual is present <a href="http://llvm.org/releases/3.4/docs/LangRef.html" target="_blank">here</a>.
+A few instructions that would be good to know are:</p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/LangRef.html#terminator-instructions" target="_blank">Terminator Instructions</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/LangRef.html#binary-operations" target="_blank">Binary Operations</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/LangRef.html#memory-access-and-addressing-operations" target="_blank">Memory Access and Addressing Operations</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/LangRef.html#icmp-instruction" target="_blank">Integer Compare Instruction</a> The types present in <span class="SpellE">llvm</span> are described <a href="http://llvm.org/releases/3.4/docs/LangRef.html#type-classifications" target="_blank">here</a>. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">IMPLEMENTATION
+IN LLVM </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">You can follow the following procedure to
+implement the function argument instantiation pass:</p>
+
+<p style="margin-left:.5in;text-align:justify;text-indent:-.25in">1.<span style="font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>At every function
+call in the program, examine its argument list to determine if one or more of
+the actual arguments are constants.</p>
+
+<p style="margin-left:.5in;text-align:justify;text-indent:-.25in">2.<span style="font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>If so, create a
+new function by cloning the original function definition. <span style="font-size:7.0pt"><span style="mso-spacerun:yes">&nbsp;</span></span>Remove
+the formal arguments corresponding to constants from the cloned function and
+add them as local variables.</p>
+
+<p style="margin-left:.5in;text-align:justify;text-indent:-.25in">3.<span style="font-size:7.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Replace the
+function at the call site with the newly cloned function. The actual arguments corresponding
+to the constants need to be removed.</p>
+
+<p style="margin-left:.25in;text-align:justify;text-indent:-.25in">Hints on how
+to write the above passes are in the “Steps involved” section below.</p>
+
+<p class="MsoNormal" style="text-align:justify"><b><span style="font-size:14.0pt;
+font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">INFRASTRUCTURE
+TO WRITE YOUR OWN PASS </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">A sample project has been created
+for you to write your own pass. A good initial step before writing your own
+pass is to compile the pass in the sample folder and check if it works. This
+will ensure that you do not have any environment bugs when you write your own
+pass. The example pass present in the lib folder called Hello prints out the
+name of every function present in the bytecode. Follow the steps below to get
+it running on your machine. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><br>
+<b>(1)</b> First copy the sample directory present at /<span class="SpellE">afs</span>/glue/class/old/<span class="SpellE">enee</span>/759c/<span class="SpellE">llvm</span>/sample to your
+local directory, say ~/xyz/sample. You can use "<span class="SpellE">cp</span>
+-R" to copy a directory and its contents. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">(2)</span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"> Create two other directories at
+the same level (<span class="SpellE">i</span>) <span class="SpellE">obj</span>
+directory, say ~/xyz/<span class="SpellE">obj</span> and (ii) an install
+directory called opt at ~/xyz/opt <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">(3)</span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"> Configure the build system in
+the <span class="SpellE">obj</span> directory as follows:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">~/xyz/<span class="SpellE">obj</span>$ ../sample/configure
+--with-<span class="SpellE">llvmsrc</span>=/<span class="SpellE">afs</span>/glue/class/old/<span class="SpellE">enee</span>/759c/<span class="SpellE">llvm</span>/llvm-3.4.src
+--with-llvmobj=/afs/glue/class/old/enee/759c/llvm/llvm-3.4-install/obj
+--prefix=/homes/your-user-name/xyz/opt <br>
+<br>
+<b>(4)</b> You can build it and test it out as follows: <br>
+<br>
+~/xyz/<span class="SpellE">obj</span>$ make install <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">0]: Installing include files<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">make[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">1]: Entering directory `/<span class="SpellE">afs</span>/glue.umd.edu/home/glue/n/e/<span class="SpellE">neroam</span>/home/xyz/<span class="SpellE">obj</span>/lib'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">make[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Entering directory `/<span class="SpellE">afs</span>/glue.umd.edu/home/glue/n/e/<span class="SpellE">neroam</span>/home/xyz/<span class="SpellE">obj</span>/lib/Hello'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Compiling Hello.cpp for <span class="SpellE">Release+Asserts</span> build (PIC)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Linking <span class="SpellE">Release+Asserts</span>
+Shared Library libHello.so<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Building <span class="SpellE">Release+Asserts</span>
+Archive Library <span class="SpellE">libHello.a</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Installing <span class="SpellE">Release+Asserts</span> Shared Library
+/homes/neroam/xyz/opt/lib/libHello.so<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="SpellE"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">llvm</span></span></span><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Installing <span class="SpellE">Release+Asserts</span> Archive Library /homes/<span class="SpellE">neroam</span>/xyz/opt/lib/<span class="SpellE">libHello.a</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">make[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">2]: Leaving directory `/<span class="SpellE">afs</span>/glue.umd.edu/home/glue/n/e/<span class="SpellE">neroam</span>/home/xyz/<span class="SpellE">obj</span>/lib/Hello'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span class="GramE"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">make[</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;">1]: Leaving directory `/<span class="SpellE">afs</span>/glue.umd.edu/home/glue/n/e/<span class="SpellE">neroam</span>/home/xyz/<span class="SpellE">obj</span>/lib'&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">[There would be many more lines ... only few reproduced
+here] <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+<b>(5)</b> Set the PATH variable to also have the <span class="SpellE">llvm</span>
+installation as follows: <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+~/xyz/<span class="SpellE">obj</span>: <span class="SpellE">setenv</span> PATH
+/afs/glue/class/old/enee/759c/llvm/llvm-3.4-install/opt/bin/:$PATH <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+Check that the installation is correct as follows <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">~/xyz/<span class="SpellE">obj</span>: opt --version&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">LLVM (http://llvm.org/):<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span style="mso-spacerun:yes">&nbsp; </span>LLVM version 3.4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span style="mso-spacerun:yes">&nbsp; </span>Optimized build.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span style="mso-spacerun:yes">&nbsp; </span>Built Mar 17 2014
+(12:45:22).<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span style="mso-spacerun:yes">&nbsp; </span>Default target:
+x86_64-unknown-linux-gnu<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><span style="mso-spacerun:yes">&nbsp; </span>Host CPU: <span class="SpellE">penryn</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+<b>(6)</b> You can run your pass as follows: <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+~/xyz/<span class="SpellE">obj</span>: opt -<span class="GramE">load ..</span>/opt/lib/libHello.so
+-hello /<span class="SpellE">afs</span>/glue/class/old/<span class="SpellE">enee</span>/759c/<span class="SpellE">llvm</span>/<span class="SpellE">test_codes</span>/example1.bc -o
+example.1hello.bc<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">The above command will optimize the example1.bc bytecode
+with the “-hello” optimization and produce as output optimized bytecode in
+example1.hello.bc. This optimization is present in the libHello.so
+library.&nbsp; <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">[The output should look like] <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+Hello: main<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">It prints out the names of all functions present in this
+module.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">Later when you write your own optimization, write it in the
+sample/lib directory. The compile and install it using steps (3) and (4)
+above.&nbsp; This should produce a new library with a .so extension.&nbsp; Then
+use the above command with the library name that you generated in place of
+libHello.so, and the name of your optimization in place of&nbsp; “-hello”. This
+will apply your transformation to the bytecode file specified.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><br>
+<br>
+</span><b><span style="font-size:14.0pt;font-family:&quot;Lucida Handwriting&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;">WRITING YOUR OWN PASS </span></b><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="text-align:justify">In LLVM the transformations and optimizations are
+written as <b>Passes</b>. The documentation about an LLVM Pass and method to
+write it is <a href="http://llvm.org/releases/3.4/docs/WritingAnLLVMPass.html" target="_blank">here</a> . The main sections that will be of interest to this
+project are </p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-align:justify;
+text-indent:-21.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/WritingAnLLVMPass.html#introduction-what-is-a-pass" target="_blank">Introduction</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-align:justify;
+text-indent:-21.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/WritingAnLLVMPass.html#quick-start-writing-hello-world" target="_blank">Quick Start</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-align:justify;
+text-indent:-21.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/docs/WritingAnLLVMPass.html#the-modulepass-class"><span class="SpellE">ModulePass</span></a><o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-align:justify;
+text-indent:-21.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/WritingAnLLVMPass.html#the-functionpass-class" target="_blank"><span class="SpellE">FunctionPass</span></a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="margin-left:39.0pt;text-align:justify;
+text-indent:-21.0pt;mso-list:l0 level1 lfo2"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/WritingAnLLVMPass.html#specifying-interactions-between-passes" target="_blank"><span class="SpellE">AnalysisRequired</span></a> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">The example code present in the sample folder has an example
+code and <span class="SpellE">Makefiles</span>. The documentation in this section
+and the example code should help you in your project. You can add a new pass to
+the sample code by creating a new directory in the lib folder and adding the
+name of this new folder to the <span class="SpellE">Makefile</span> in the lib
+folder. <o:p></o:p></span></p>
+
+<p style="text-align:justify">The programmer's manual <a href="http://llvm.org/releases/3.4/docs/ProgrammersManual.html" target="_blank">here</a>
+gives an introduction to some important and useful API's in LLVM. A few
+sections of the programmer's manual that will be interest to this project are: </p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/ProgrammersManual.html#helpful-hints-for-common-operations" target="_blank">Common Operations</a> <o:p></o:p></span></p>
+
+<p class="MsoListParagraph" style="text-align:justify;text-indent:-.25in"><span style="font-family:Symbol;mso-bidi-font-family:&quot;Times New Roman&quot;">·</span><span style="font-size:7.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="MsoHyperlink"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/releases/3.4/docs/ProgrammersManual.html#the-core-llvm-class-hierarchy-reference" target="_blank">Core LLVM classes</a>&nbsp;</span></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="text-align:justify"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;">These sections show methods to add and delete instructions
+in the input bytecode and also present methods for basic inspection and
+traversal routines. <o:p></o:p></span></p>
+
+<p style="text-align:justify">The <span class="SpellE">doxygen</span> for the
+LLVM project is present at <a href="http://www.llvm.org/doxygen" target="_blank">here</a>.
+</p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;text-align:justify"><b><span style="font-size:14.0pt;font-family:&quot;Lucida Handwriting&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;">STEPS INVOLVED</span></b><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;background:white"><span class="im"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1">Below are helpful suggestions on how to implement some of
+the tasks in the project. You can choose to use them, but full credit will be
+given for other implementations, provided you write them yourself without
+assistance or copying code from elsewhere. Of course, you are allowed to look
+at code already in the LLVM compiler as examples. </span><span style="color:black;mso-themecolor:text1"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;background:white"><span class="im"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-themecolor:text1">1.</span></b></span><span class="apple-converted-space"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1">&nbsp;</span></b></span><span class="im"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1">Iterate over all instructions</span></b></span><span class="im"><b><span style="font-size:14.0pt;color:black;mso-themecolor:text1"><o:p></o:p></span></b></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#222222">First iterate over
+all instructions in the original code and for each instruction cast it to a <span class="SpellE">CallInst</span>, if this succeeds then you have an instruction
+that is of interest.<span class="apple-converted-space">&nbsp;</span>The<span class="apple-converted-space">&nbsp;</span><span class="SpellE"><i>CallInst</i></span><span class="apple-converted-space">&nbsp;</span>class is defined in&nbsp;<span class="apple-converted-space">&nbsp;</span><br>
+<a href="http://llvm.org/doxygen/Instructions_8h_source.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/<wbr>Instructions_8h_source.html</span></a>.<span class="apple-converted-space">&nbsp;</span><span style="background:white">Some of
+functions of interest in this class are<span class="apple-converted-space">&nbsp;</span></span></span><span class="SpellE"><span class="GramE"><i>getCalledFunction</i></span></span><span class="GramE"><i>(</i></span><i>)</i>&nbsp; -- This will tell you which function
+is being called<span class="apple-converted-space">&nbsp;</span><span style="color:#500050"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;background:white"><span class="im"><b style="mso-bidi-font-weight:normal"><span style="font-size:14.0pt;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;mso-themecolor:text1">2.</span></b></span><span class="apple-converted-space"><span style="font-size:14.0pt;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:black;mso-themecolor:text1">&nbsp;</span></span><span class="im"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-themecolor:text1">Access the argument list of a function.</span></b></span><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#500050"><br>
+</span><span class="SpellE"><i><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">arg_begin</span></i></span><i><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#222222">() <span class="SpellE">arg_end</span>()</span></i><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#222222">&nbsp; iterators will
+help you to get to the arguments. This also is present in the <span class="SpellE">CallInst</span> class.<span class="apple-converted-space">&nbsp;</span>Another
+way to access arguments is<span class="apple-converted-space">&nbsp;</span><br>
+<br>
+unsigned&nbsp;<span class="SpellE">getNumArgOperands</span> () <span class="SpellE">const</span>&nbsp; --- gives number of operands<span class="apple-converted-space">&nbsp;</span><br>
+Value *&nbsp;<span class="SpellE">getArgOperand</span> (unsigned <span class="SpellE">i</span>) <span class="SpellE">const</span>&nbsp; -- will help you
+get the argument at index <span class="SpellE">i</span><span class="apple-converted-space">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;background:white"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1">3. Check whether an actual argument is a constant.</span></b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="background:white"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#222222">To know if an object of type Value* (say V) is
+a constant, the following code can be used<span class="apple-converted-space">&nbsp;</span><br style="mso-special-character:line-break">
+<!--[if !supportLineBreakNewLine]--><br style="mso-special-character:line-break">
+<!--[endif]--><o:p></o:p></span></p>
+
+<pre style="background:white"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;
+color:#222222">if (<span class="SpellE">isa</span>&lt;Constant&gt;(V))<o:p></o:p></span></pre><pre style="background:white"><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,serif;
+color:#222222"><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp; </span>return true;<o:p></o:p></span></pre>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-themecolor:text1">4. Clone a function</span></b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">It is present in the file<span class="apple-converted-space">&nbsp;</span><br>
+<br>
+<a href="http://llvm.org/docs/doxygen/html/CloneFunction_8cpp_source.html#l00223" target="_blank"><span style="color:#1155CC">http://llvm.org/docs/doxygen/<wbr>html/CloneFunction_8cpp_<wbr>source.html#l00223</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#500050"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-themecolor:text1">5. Replace a call to a function to a call to
+another function.</span></b><span style="font-size:14.0pt;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:black;mso-themecolor:text1"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">There are two ways to accomplish this.<span class="apple-converted-space">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">(a) You need to create a new <span class="SpellE">CallInst</span>
+calling your cloned function and new arguments. Use one of the constructors of
+the <span class="SpellE">CallInst</span> which will also let you specify a point
+to insert it. If you do this you also need to remove the original instruction
+from its parent. This is present in the<span class="apple-converted-space">&nbsp;</span><i>Instruction</i><span class="apple-converted-space">&nbsp;</span>class.<span class="apple-converted-space">&nbsp;</span><br>
+<br>
+<a href="http://llvm.org/doxygen/Instruction_8h_source.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/<wbr>Instruction_8h_source.html</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">(b) There is a method called<span class="apple-converted-space">&nbsp;</span><span class="SpellE"><i>setCalledFunction</i></span><span class="apple-converted-space">&nbsp;</span>in
+the <span class="SpellE">CallInst</span> class. Use this to replace the old
+function with the new one. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-themecolor:text1">6. Create a constant symbol of type Value<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Create a new constant symbol
+in main memory with the value of the constant argument. To do this, use any
+suitable constructor in the&nbsp;<span class="SpellE"><b>ConstantInt</b></span>&nbsp;class
+in LLVM. For example, if you have cloned some function:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span class="GramE"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">foo(</span></span><span class="SpellE"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">int</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"> x, <span class="SpellE">int</span>
+y)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;color:#333333">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span class="GramE"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">and</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"> it was called as foo(a, 5),
+then create a constant called&nbsp;<span class="SpellE"><i>myconst</i></span>&nbsp;with
+the value of 5 in the main </span>memory. /* Note this constant is not added to
+IR yet. That is fine. */</p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">Use the get( ) <a href="http://llvm.org/docs/doxygen/html/classllvm_1_1ConstantInt.html"><span style="font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif">constructor</span></a>
+in <span class="SpellE">ConstantInt</span> class for this purpose. Below is the
+prototype,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:1.5pt;line-height:12.2pt;tab-stops:
+45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<table class="MsoNormalTable" border="0" cellpadding="0" style="mso-cellspacing:1.5pt;
+ background:white;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td nowrap="" valign="top" style="border:none;border-top:solid #C4CFE5 1.0pt;
+  mso-border-top-alt:solid #C4CFE5 .75pt;background:#F9FAFC;padding:.75pt 0in 0in 6.0pt">
+  <p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">static&nbsp;<span class="SpellE"><a href="http://llvm.org/docs/doxygen/html/classllvm_1_1ConstantInt.html"><b><span style="color:#4665A2">ConstantInt</span></b></a></span>&nbsp;*&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width="1440" valign="bottom" style="width:15.0in;border:none;border-top:solid #C4CFE5 1.0pt;
+  mso-border-top-alt:solid #C4CFE5 .75pt;background:#F9FAFC;padding:.75pt 0in 0in 6.0pt">
+  <p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><a href="http://llvm.org/docs/doxygen/html/classllvm_1_1ConstantInt.html#a1c51933b9fb89c364a098fad544cba96"><b><span style="color:#4665A2">get</span></b></a>&nbsp;(<span class="SpellE"><a href="http://llvm.org/docs/doxygen/html/classllvm_1_1IntegerType.html"><b><span style="color:#4665A2">IntegerType</span></b></a></span>&nbsp;*Ty, uint64_t
+  V,&nbsp;<a href="http://llvm.org/docs/doxygen/html/classbool.html"><b><span style="color:#4665A2">bool</span></b></a>&nbsp;<span class="SpellE">isSigned</span>=<a href="http://llvm.org/docs/doxygen/html/SimplifyInstructions_8cpp.html#a6dd713bd88673625bb181528a61bdc85"><b><span style="color:#4665A2">false</span></b></a>)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1;mso-yfti-lastrow:yes">
+  <td style="background:#F9FAFC;padding:0in 6.0pt 3.0pt 6.0pt">
+  <p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:#555555">&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td style="background:#F9FAFC;padding:0in 6.0pt 3.0pt 6.0pt">
+  <p class="MsoNormal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;
+  color:#555555">Return a&nbsp;<span class="SpellE"><a href="http://llvm.org/docs/doxygen/html/classllvm_1_1ConstantInt.html" title="This is the shared class of boolean and integer constants."><b><span style="color:#4665A2">ConstantInt</span></b></a></span>&nbsp;with the
+  specified integer value for the specified type.&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="margin-bottom:1.5pt;line-height:12.2pt;tab-stops:
+45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="font-size:10.0pt;font-family:&quot;Helvetica&quot;,sans-serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1">7. </span></b><b style="mso-bidi-font-weight:normal"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333;background:white">Replace all uses of a formal argument with the
+constant symbol you created above. </span></b><span style="font-size:10.0pt;
+font-family:&quot;Times&quot;,serif;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">First, the Function class defined in<span class="apple-converted-space">&nbsp;</span><a href="http://llvm.org/doxygen/Function_8h_source.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/<wbr>Function_8h_source.html</span></a><span class="apple-converted-space">&nbsp;</span>gives you capabilities to access the
+arguments of a function.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">You can iterate over the arguments using<span class="apple-converted-space">&nbsp;</span><span class="SpellE"><i>arg_<span class="GramE">begin</span></i></span><span class="GramE"><i>(</i></span><i>) <span class="SpellE">arg_end</span>()<span class="apple-converted-space">&nbsp;</span></i>.
+You can get to objects of class type<span class="apple-converted-space">&nbsp;</span><i>Value</i><span class="apple-converted-space">&nbsp;</span>from these.<span class="apple-converted-space">&nbsp;</span> This class is defined in<span class="apple-converted-space">&nbsp;</span><br>
+<br>
+<a href="http://llvm.org/doxygen/Value_8h_source.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/Value_<wbr>8h_source.html</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span class="apple-converted-space"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#222222">Let the formal argument corresponding to the
+constant be <span class="SpellE">constArg</span>.</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span class="apple-converted-space"><span style="mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#222222"><o:p>&nbsp;</o:p></span></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333">Value * <span class="SpellE">constArg</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333">Then, we can replace all uses of this argument with the constant
+you created in the previous step (<span class="SpellE">myconst</span>) as
+follows. We call </span><span class="SpellE"><span class="GramE"><i><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#222222">replaceAllUsesWith</span></i></span></span><span class="GramE"><i><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#222222">(</span></i></span><i><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;color:#222222">Value* V) </span></i><span class="apple-converted-space"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><span style="mso-spacerun:yes">&nbsp;</span>function on the object <span class="SpellE">constArg</span> as shown below :</span></span><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span class="SpellE"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#333333">constArg</span></span><span style="mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:#333333"> -&gt; <span class="SpellE">replaceAllUsesWith</span>(<span class="SpellE">myconst</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333">In the example in the previous step, this will replace all uses
+of formal argument y with 5. Look at <a href="http://llvm.org/docs/doxygen/html/classllvm_1_1ConstantInt.html">this</a>
+for <span class="SpellE">replaceAllUsesWith</span> function prototype. It’s also
+shown below:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<table class="MsoNormalTable" border="0" cellpadding="0" style="mso-cellspacing:1.5pt;
+ background:white;mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in">
+ <tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+  <td nowrap="" valign="top" style="border:none;border-top:solid #C4CFE5 1.0pt;
+  mso-border-top-alt:solid #C4CFE5 .75pt;background:#F9FAFC;padding:.75pt 0in 0in 6.0pt">
+  <p class="MsoNormal" align="right" style="margin:3.0pt;text-align:right;
+  line-height:12.7pt"><span style="font-size:10.0pt;font-family:&quot;Lucida Grande&quot;;
+  mso-fareast-font-family:&quot;Times New Roman&quot;;color:black">void&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td width="1440" valign="bottom" style="width:15.0in;border:none;border-top:solid #C4CFE5 1.0pt;
+  mso-border-top-alt:solid #C4CFE5 .75pt;background:#F9FAFC;padding:.75pt 0in 0in 6.0pt">
+  <p class="MsoNormal" style="margin:3.0pt;line-height:12.7pt"><span style="font-size:10.0pt;font-family:&quot;Lucida Grande&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:black"><a href="http://llvm.org/docs/doxygen/html/classllvm_1_1Value.html#a3ab5fc45117b450e8bb04e564cb6e5f2"><span class="SpellE"><b><span style="color:#4665A2">replaceAllUsesWith</span></b></span></a>&nbsp;(<a href="http://llvm.org/docs/doxygen/html/classllvm_1_1Value.html"><b><span style="color:#4665A2">Value</span></b></a>&nbsp;*V)<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="mso-yfti-irow:1;mso-yfti-lastrow:yes">
+  <td style="background:#F9FAFC;padding:0in 6.0pt 3.0pt 6.0pt">
+  <p class="MsoNormal" style="margin:3.0pt;line-height:12.7pt"><span style="font-size:10.0pt;font-family:&quot;Lucida Grande&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#555555">&nbsp;<o:p></o:p></span></p>
+  </td>
+  <td style="background:#F9FAFC;padding:0in 6.0pt 3.0pt 6.0pt">
+  <p class="MsoNormal" style="margin:3.0pt;line-height:12.7pt"><span style="font-size:10.0pt;font-family:&quot;Lucida Grande&quot;;mso-fareast-font-family:
+  &quot;Times New Roman&quot;;color:#555555">Change all uses of this to point to a
+  new&nbsp;<a href="http://llvm.org/docs/doxygen/html/classllvm_1_1Value.html" title="LLVM Value Representation."><b><span style="color:#4665A2">Value</span></b></a>.&nbsp;<o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333">Note that this step does NOT remove the argument, it just makes
+it dead by removing all uses to it.<span style="mso-spacerun:yes">&nbsp; </span>Now
+that the argument is dead, it is easy to remove in the next step.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#333333"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:black;mso-themecolor:text1">8. Remove dead arguments from functions.</span></b><span style="font-size:14.0pt;mso-bidi-font-family:&quot;Times New Roman&quot;;color:black;
+mso-themecolor:text1"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">This step removes both the actuals and formals for arguments
+that are never used (i.e., are dead.) The easiest way to do this is to use the<span class="apple-converted-space">&nbsp;pre-existing LLVM pass:</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><i><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">-<span class="SpellE">deadargelim</span>:</span></i><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;Dead Argument
+Elimination pass after you have made the IR changes.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="mso-fareast-font-family:&quot;Times New Roman&quot;">This will remove both the
+actual and formal arguments that are no longer needed automatically from
+everywhere in the code. No need to write new LLVM code at all for this step!
+The argument y will be removed, for example, because it no longer has any uses
+in <span class="GramE">foo(</span>), since all uses of it have been replaced by a
+constant.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="color:#222222">Run the <span class="SpellE"><i style="mso-bidi-font-style:
+normal">deadargelim</i></span> pass separately on the command line with the
+byte code obtained from running your pass as the input bytecode. Below is the
+command to do it.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span style="color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><i style="mso-bidi-font-style:normal"><span style="color:#222222">opt --<span class="SpellE">deadargelim</span> &lt; input bytecode &gt; -o &lt; output byte
+code &gt;</span></i><span style="mso-fareast-font-family:&quot;Times New Roman&quot;"><o:p></o:p></span></p>
+
+<p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="color:#222222">No need to integrate the calling
+of <span class="SpellE">deadargelim</span> pass in your function instantiation
+pass code.<o:p></o:p></span></p>
+
+<p style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="color:#222222">Alternately, one can imagine
+doing it by actually deleting an argument of a function. Using ideas from code
+present in<span class="apple-converted-space">&nbsp;</span><a href="http://llvm.org/docs/doxygen/html/DeadArgumentElimination_8cpp_source.html" target="_blank"><span style="color:#1155CC">http://llvm.org/docs/doxygen/<wbr>html/DeadArgumentElimination_<wbr>8cpp_source.html</span></a><span class="apple-converted-space">&nbsp;</span>one can do this. Look at functions
+around 319 and 739 if you are interested, but this is not the easiest way.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">Some useful links in general<span class="apple-converted-space">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">(a) A list of all classes present in <span class="SpellE">llvm</span>
+--<span class="apple-converted-space">&nbsp;</span><a href="http://llvm.org/doxygen/classes.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/<wbr>classes.html</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">(b) A list of all files present in <span class="SpellE">llvm</span>
+--<span class="apple-converted-space">&nbsp;</span><a href="http://llvm.org/doxygen/files.html" target="_blank"><span style="color:#1155CC">http://llvm.org/doxygen/files.<wbr>html</span></a><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="margin-bottom:12.0pt;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">(c) Link to <span class="SpellE">llvm's</span> programmer manual
+--<span class="apple-converted-space">&nbsp;</span><a href="http://llvm.org/releases/3.4/docs/ProgrammersManual.html" target="_blank"><span style="color:#1155CC">http://llvm.org/releases/3.4/<wbr>docs/ProgrammersManual.html</span></a>&nbsp;<span class="apple-converted-space">&nbsp;</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt;
+background:white"><span style="mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#222222">Some subsections of interest here may be<span class="apple-converted-space">&nbsp;</span><i>cast templates, iterating over
+basic blocks in a function, iterating over instructions in a <span class="SpellE">Basicblock</span> and so on. Iterating over <span class="SpellE">def</span>-use
+chains, Creating and inserting new instructions, deleting instructions,
+replacing an instruction with another value, Creating types, the Value class,
+the Constant class, the Function class and so on.&nbsp;</i><span class="apple-converted-space">&nbsp;</span><o:p></o:p></span></p>
+
+<p style="text-align:justify;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><b><span style="font-size:14.0pt;font-family:&quot;Lucida Handwriting&quot;">MORE USEFUL LINKS<o:p></o:p></span></b></p>
+
+<p style="margin-left:.5in;text-align:justify;text-indent:-.25in;mso-list:l1 level1 lfo4;
+tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><!--[if !supportLists]--><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><!--[endif]--><a href="http://laure.gonnord.org/pro/research/ER03_2015/lab3_intro.pdf">Writing
+an LLVM pass</a> – Refer to the page titled iterating through Functions,
+Blocks, Instructions.</p>
+
+<p style="margin-left:.5in;text-align:justify;tab-stops:45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><o:p>&nbsp;</o:p></p>
+
+</div>
+
+
+
+
+</body></html>
